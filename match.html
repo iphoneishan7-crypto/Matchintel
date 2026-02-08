@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Detailed match analysis with live scores, team stats, player performance, and intelligent insights powered by data.">
+    <title>Match Details - MatchIntel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="match.css">
+    <link rel="stylesheet" href="pages.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="window.location.href='index.html'">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">MatchIntel</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">← Back to Matches</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Match Overview Section -->
+    <section class="match-overview">
+        <div class="container">
+            <div class="match-title-section">
+                <h1 class="match-title" id="matchTitle">Loading match...</h1>
+                <div class="match-meta">
+                    <span class="match-format-badge" id="matchFormat">TEST</span>
+                    <span class="match-status-badge" id="matchStatus">Live</span>
+                </div>
+            </div>
+
+            <!-- Live Score Card -->
+            <div class="score-card" id="scoreCard">
+                <div class="loading-state">
+                    <div class="loader"></div>
+                    <p>Loading match details...</p>
+                </div>
+            </div>
+
+            <!-- Match Info Grid -->
+            <div class="match-info-grid" id="matchInfoGrid">
+                <!-- Will be populated dynamically -->
+            </div>
+
+            <!-- Ad Unit: After Scorecard -->
+            <div class="container" style="margin-top: 2rem;">
+                <div class="ad-container">
+                    <span class="ad-label">Advertisement</span>
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                        data-ad-slot="1112223334" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Match Analysis Sections -->
+    <section class="analysis-section">
+        <div class="container">
+            <div class="analysis-grid">
+                <!-- Pitch Analysis -->
+                <div class="analysis-card">
+                    <h2 class="analysis-title">
+                        <span class="analysis-icon">🏟️</span>
+                        Pitch Analysis
+                    </h2>
+                    <div class="analysis-content" id="pitchAnalysis">
+                        <div class="pitch-indicators">
+                            <div class="indicator">
+                                <div class="indicator-label">Pace Friendliness</div>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill" style="width: 65%"></div>
+                                </div>
+                                <div class="indicator-value">65%</div>
+                            </div>
+                            <div class="indicator">
+                                <div class="indicator-label">Spin Assistance</div>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill" style="width: 45%"></div>
+                                </div>
+                                <div class="indicator-value">45%</div>
+                            </div>
+                            <div class="indicator">
+                                <div class="indicator-label">Batting Ease</div>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill" style="width: 70%"></div>
+                                </div>
+                                <div class="indicator-value">70%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weather Impact -->
+                <div class="analysis-card">
+                    <h2 class="analysis-title">
+                        <span class="analysis-icon">🌤️</span>
+                        Weather Impact
+                    </h2>
+                    <div class="analysis-content" id="weatherAnalysis">
+                        <div class="weather-stats">
+                            <div class="weather-stat">
+                                <div class="weather-label">Temperature</div>
+                                <div class="weather-value">28°C</div>
+                            </div>
+                            <div class="weather-stat">
+                                <div class="weather-label">Humidity</div>
+                                <div class="weather-value">62%</div>
+                            </div>
+                            <div class="weather-stat">
+                                <div class="weather-label">Wind Speed</div>
+                                <div class="weather-value">12 km/h</div>
+                            </div>
+                            <div class="weather-stat">
+                                <div class="weather-label">Rain Chance</div>
+                                <div class="weather-value">15%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Head to Head Section -->
+    <section class="h2h-section">
+        <div class="container">
+            <h2 class="section-title">Head-to-Head Record</h2>
+            <div class="h2h-card" id="h2hCard">
+                <div class="h2h-stats">
+                    <div class="h2h-team">
+                        <div class="h2h-team-name" id="team1Name">Team 1</div>
+                        <div class="h2h-wins" id="team1Wins">0</div>
+                        <div class="h2h-label">Wins</div>
+                    </div>
+                    <div class="h2h-divider">
+                        <div class="h2h-total">Last 10 Matches</div>
+                    </div>
+                    <div class="h2h-team">
+                        <div class="h2h-team-name" id="team2Name">Team 2</div>
+                        <div class="h2h-wins" id="team2Wins">0</div>
+                        <div class="h2h-label">Wins</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <h2 class="section-title">Recent Form (Last 5 Matches)</h2>
+            <div class="form-grid">
+                <div class="form-card">
+                    <h3 class="form-team-name" id="formTeam1Name">Team 1</h3>
+                    <div class="form-bars" id="formTeam1">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+                <div class="form-card">
+                    <h3 class="form-team-name" id="formTeam2Name">Team 2</h3>
+                    <div class="form-bars" id="formTeam2">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playing XI Section -->
+    <section class="playing-xi-section">
+        <div class="container">
+            <h2 class="section-title">Playing XI</h2>
+            <div class="xi-grid" id="playingXI">
+                <!-- Will be populated dynamically -->
+            </div>
+
+            <!-- Ad Unit: After Playing XI -->
+            <div class="container" style="margin-top: 2rem;">
+                <div class="ad-container">
+                    <span class="ad-label">Advertisement</span>
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                        data-ad-slot="4445556667" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Players Section -->
+    <section class="key-players-section">
+        <div class="container">
+            <h2 class="section-title">Key Players to Watch</h2>
+            <div class="players-grid" id="keyPlayers">
+                <!-- Will be populated dynamically -->
+            </div>
+
+            <!-- Ad Unit: After Key Players -->
+            <div class="container" style="margin-top: 2rem;">
+                <div class="ad-container">
+                    <span class="ad-label">Advertisement</span>
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                        data-ad-slot="7778889990" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section for SEO -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid" id="faqSection">
+                <div class="faq-item">
+                    <h3 class="faq-question">When does this match start?</h3>
+                    <p class="faq-answer" id="faqTime">Match timing will be displayed here.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Where is this match being played?</h3>
+                    <p class="faq-answer" id="faqVenue">Venue information will be displayed here.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What is the pitch condition?</h3>
+                    <p class="faq-answer">The pitch analysis indicates balanced conditions favoring both batsmen and
+                        bowlers, with moderate pace and spin assistance.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How to watch this match live?</h3>
+                    <p class="faq-answer">Check your local sports broadcasters for live coverage. MatchIntel provides
+                        real-time score updates and analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="container">
+        <!-- Ad Unit: Before Footer -->
+        <div class="ad-container">
+            <span class="ad-label">Advertisement</span>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="0001112223" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">MatchIntel</span>
+                    </div>
+                    <p class="footer-tagline">Cricket intelligence powered by data</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Platform</h3>
+                        <a href="index.html#today" class="footer-link">Today's Matches</a>
+                        <a href="index.html#upcoming" class="footer-link">Upcoming Matches</a>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Company</h3>
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                        <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MatchIntel. All rights reserved.</p>
+                <p class="footer-attribution">Data powered by CricketData.org</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="match.js"></script>
+</body>
+
+</html>

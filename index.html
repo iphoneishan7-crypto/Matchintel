@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MatchIntel - Today's cricket matches explained with real data, live scores, and intelligent analytics. No news, just pure cricket intelligence.">
+    <meta name="keywords"
+        content="cricket matches today, live cricket scores, cricket analytics, cricket data, upcoming cricket matches">
+    <title>MatchIntel - Today's Cricket Matches Explained with Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">MatchIntel</span>
+                </div>
+                <nav class="nav">
+                    <a href="#today" class="nav-link active">Today</a>
+                    <a href="#upcoming" class="nav-link">Upcoming</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Today's Cricket Matches — Explained with Data</h1>
+            <p class="hero-subtitle">Real-time intelligence. Zero noise. Pure cricket analytics.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="stat-value" id="liveMatchCount">0</div>
+                    <div class="stat-label">Live Now</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-value" id="todayMatchCount">0</div>
+                    <div class="stat-label">Today</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-value" id="upcomingMatchCount">0</div>
+                    <div class="stat-label">Upcoming</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Today's Matches Section -->
+    <section class="matches-section" id="today">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Live & Today's Matches</h2>
+                <div class="refresh-indicator" id="refreshIndicator">
+                    <span class="refresh-dot"></span>
+                    <span class="refresh-text">Auto-updating</span>
+                </div>
+            </div>
+            <div class="matches-grid" id="todayMatchesGrid">
+                <!-- Match cards will be dynamically inserted here -->
+                <div class="loading-state">
+                    <div class="loader"></div>
+                    <p>Loading match data...</p>
+                </div>
+            </div>
+
+            <!-- Ad Unit: After Match List -->
+            <div class="container" style="margin-top: 2rem;">
+                <div class="ad-container">
+                    <span class="ad-label">Advertisement</span>
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                        data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Matches Section -->
+    <section class="matches-section" id="upcoming">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Upcoming Matches</h2>
+            </div>
+            <div class="matches-grid" id="upcomingMatchesGrid">
+                <!-- Upcoming match cards will be dynamically inserted here -->
+                <div class="loading-state">
+                    <div class="loader"></div>
+                    <p>Loading upcoming matches...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="container">
+        <!-- Ad Unit: Before Footer -->
+        <div class="ad-container">
+            <span class="ad-label">Advertisement</span>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">MatchIntel</span>
+                    </div>
+                    <p class="footer-tagline">Cricket intelligence powered by data</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Platform</h3>
+                        <a href="#today" class="footer-link">Today's Matches</a>
+                        <a href="#upcoming" class="footer-link">Upcoming Matches</a>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Company</h3>
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                        <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MatchIntel. All rights reserved.</p>
+                <p class="footer-attribution">Data powered by CricketData.org</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
